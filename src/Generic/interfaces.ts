@@ -3,7 +3,7 @@ interface Result<T> {
     error: string | null
 }
 
-function fetch<T>(url: string): Result<T> {
+function fetch<T>(_url: string): Result<T> {
     return {
         data: {} as T,
         error: null
