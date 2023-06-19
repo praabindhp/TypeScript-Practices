@@ -8,9 +8,21 @@ interface Product {
 //     readonly price: number;
 // }
 
-type readonlyProduct = {
+type ReadOnly<T> = {
   // Index Signature Property
   
   // KeyOf Property
-  [K in keyof Product]: Product[K];
-};
+  readonly [K in keyof T]: T[K];
+}
+
+type Optional<T> = {
+  [K in keyof T]?: T[K];
+}
+
+let product: ReadOnly<Product> = {
+  name: 'a',
+  price: 1,
+  title: ""
+}
+
+// product.name = 'a';
