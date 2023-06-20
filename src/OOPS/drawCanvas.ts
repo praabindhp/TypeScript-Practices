@@ -3,7 +3,7 @@ abstract class Shape {
   abstract render(): void;
 }
 
-class Circle extends Shape {
+class Circle2 extends Shape {
     constructor(public radius: number, color: string) {
         super(color);
     }
@@ -13,7 +13,7 @@ class Circle extends Shape {
     }
 }
 
-let shape: Shape = new Circle(10, "Red");
+let shape: Shape = new Circle2(10, "Red");
 shape.render();
 
 /*
